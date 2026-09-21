@@ -1,0 +1,33 @@
+[core]
+   autocrlf = input
+   safecrlf = true
+   excludesfile = ~/.gitignore
+   editor = vim
+[alias]
+   br = branch
+   ci = commit
+   co = checkout
+   du = cat-file -p
+   hi = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+   hl = log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all
+   rb = rebase
+   st = status
+   sw = switch
+   sy = !git fetch --all && git reset --hard HEAD
+   ty = cat-file -t
+[filter "lfs"]
+   clean = git-lfs clean -- %f
+   smudge = git-lfs smudge -- %f
+   process = git-lfs filter-process
+   required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+  gpgsign = true
+[tag]
+  forceSignAnnotated = false
+[gpg]
+  program = /usr/bin/gpg
