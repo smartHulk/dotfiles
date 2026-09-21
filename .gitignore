@@ -12,6 +12,13 @@
 !quickshell/
 !quickshell/**
 
+#rofi
+!rofi/
+!rofi/**
+
+#template
+!template/
+!template/**
 
 
 !.gitignore
