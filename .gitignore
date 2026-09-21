@@ -1,0 +1,17 @@
+*
+
+#alacritty
+!alacritty/
+!alacritty/**
+
+#hyprland
+!hypr/
+!hypr/**
+
+#quickshell
+!quickshell/
+!quickshell/**
+
+
+
+!.gitignore
